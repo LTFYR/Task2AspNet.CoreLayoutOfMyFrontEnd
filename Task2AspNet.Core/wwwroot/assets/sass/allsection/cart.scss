@@ -1,0 +1,385 @@
+@import "../assets/mixins.scss";
+@import "../assets/colors.scss";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+
+.cart-container{
+  padding: 80px 0;
+
+  &__totalprice{
+    margin-top: 30px; 
+    background-color: #f8f8f8;
+
+    h3{
+      color: #333333;
+      font-weight: 500;
+      padding: 26px 15px 26px;
+      border-bottom: 1px solid gainsboro;
+    }
+    &__main{
+      width: 100%;
+
+      &__subtotal{
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid gainsboro;
+        padding: 15px 20px;
+      }
+      &__shipping{
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid gainsboro;
+        padding: 15px 20px;
+      }
+      &__total{
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid gainsboro;
+        padding: 15px 20px;
+      }
+      button{
+        width: 100% !important;
+        padding: 15px 20px;
+        color: $main;
+        outline: none;
+        width: 240px;
+        background-color: #333333;
+        height: 50px;
+        border: none;
+        line-height: 1;
+        vertical-align: middle;
+        transition: 0.4s ease-in-out;
+
+        &:hover{
+          background-color: $main;
+          color: white;
+        }
+      }
+    }
+  }
+
+  &__box{
+    overflow-x: auto;
+    table{
+      
+    }
+
+    &__optionalcart{
+      border: 1px solid gainsboro;
+      border-top: none;
+      padding: 15px 20px;
+      position: relative;
+      bottom: 16px;
+      margin-bottom: 35px;
+      display: flex;
+      justify-content: space-between;
+      @media only screen and (max-width: 768px) {
+          border: 1px solid gainsboro;
+          overflow: hidden;
+          &__apply{
+            width: 100% !important;
+            input{
+              display: block;
+              width: 100% !important;
+              margin-bottom: 20px;
+            }
+            button{
+              display: block;
+              margin-bottom: 20px;
+              width: 100%;
+            }
+          }
+          &__update{
+            button{
+              margin-bottom: 20px;
+              width: 100%;
+            }
+          }
+      }
+
+        &__apply{
+          width: 55%;
+        display: flex;
+
+       
+        input{
+          width: 100%;
+          padding: 12px 10px;
+          height: 50px;
+          outline: none;
+          font-size: 14px;
+          border: 1px solid gainsboro;
+          margin-right: 16px;
+          line-height: inherit;
+        }
+        &__btn{
+          color: $main;
+          outline: none;
+          width: 240px;
+          background-color: #333333;
+          height: 50px;
+          border: none;
+          line-height: 1;
+          vertical-align: middle;
+          transition: 0.4s ease-in-out;
+
+          &:hover{
+            background-color: $main;
+            color: white;
+          }
+        }
+      }
+      &__update{
+        &__btn{
+          color: $main;
+          outline: none;
+          width: 240px;
+          background-color: #333333;
+          height: 50px;
+          border: none;
+          line-height: 1;
+          vertical-align: middle;
+          transition: 0.4s ease-in-out;
+
+          &:hover{
+            background-color: $main;
+            color: white;
+          }
+        }
+
+      }
+    }
+
+    &__table{
+      max-width: 100%;
+      overflow-x: auto;
+
+      &__head{
+        background-color: $main;
+
+        &__row{
+          
+          th{
+            border-color: $main;
+            font-size: 14px;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+            font-weight: 600;
+          }
+        }
+      }
+      &__body{
+
+       
+        border: none !important;
+
+        &__row{
+          border-color: gainsboro;
+
+          &__price{
+            width: 140px;
+            vertical-align: middle;
+          }
+          &__total{
+            width: 140px;
+            vertical-align: middle;
+          }
+          &__trash{
+            width: 140px;
+            vertical-align: middle;
+            a{
+              color: gray;
+            }
+          }
+          &__quantity{
+            width: 140px;
+
+            &__div{
+              margin-top: 30px;
+              width: 90px;
+              height: 38px;
+              padding: 0 15px;
+              float: left;
+              border: 1px solid gainsboro;
+              
+              &--first{
+                display: block;
+                width: 15px;
+                line-height: 38px;
+                cursor: pointer;
+                float: left;
+                text-align: center;
+                font-size: 22px;
+                font-weight: 400;
+                line-height: 38px;
+              }
+              input{
+                width: 28px;
+                line-height: 38px;
+                height: 34px;
+                padding: 0;
+                float: left;
+                margin: 0;
+                border: none !important;
+                outline: none;
+                text-align: center;
+              }
+              &--last{
+                display: block;
+                width: 15px;
+                cursor: pointer;
+                float: left;
+                text-align: center;
+                font-size: 22px;
+                font-weight: 400;
+                line-height: 38px;
+              }
+            }
+          }
+          &__image{
+            width: 140px;
+          }
+          &__name{
+            width: 469px !important;
+            vertical-align: middle;
+            padding: 10px 20px;
+            a{
+              text-decoration: none;
+              color: black;
+              font-weight: 400;
+            }
+          }
+
+          td{
+            border-color: #ccc;
+            text-align: center;
+            padding: 10px 20px;
+            a{
+              img{
+                max-width: 100%;
+                height: auto;
+              }
+            }
+          }
+        }
+        @media only screen and (max-width: 768px){
+          &__row{
+            &__name{
+              // width: 150% !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.myheader{
+  height: 40px;
+
+  .myInp{
+    position: relative;
+    top: -14px;
+    
+    
+}
+.fa-magnifying-glass{
+  position: absolute;
+  left: 100px;
+  color: red;
+  top: 30px;
+  z-index: 3;
+}
+}
+
+.menuNav{
+  width: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  right: 1px;
+  bottom:0px;
+  margin-bottom: 50px;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 1px solid gainsboro;
+}
+
+.itemmm{
+  overflow: hidden;
+  a{
+    padding-bottom: 8px;
+    font-size: 14px;
+  }
+
+
+  span{
+    font-size: 20px;
+    position: relative;
+    left:140px;
+    color: rgba(0, 0, 0, 0.538);
+  }
+  .span3{
+    position: relative;
+    left: 146px;
+    color: rgba(0, 0, 0, 0.538);
+  }
+  .span4{
+    position: relative;
+    left: 150px;
+    color: rgba(0, 0, 0, 0.538);
+  }
+}
+
+.btnNav{
+  display: block;
+  background: white;
+  position: relative;
+  text-decoration: none;
+  color: black;
+}
+
+.btnNav:before{
+  content: "";
+  position: absolute;
+  background:white;
+}
+
+.btnNav  i{
+}
+
+.smenu{
+  background: white;
+  transition: max-height .3s;
+  max-height: 0;
+}
+
+.smenu a{
+  display: block;
+  font-size: 12px;
+  position: relative;
+  margin-left: 10px;
+  padding-bottom: 8px;
+  color: black;
+  text-decoration: none;
+}
+
+.smenu a::before{
+  content: "";
+  position: absolute;
+  width: 5px;
+  background: white;
+  left: 0;
+  top: -10px;
+  transition: linear .3s;
+  opacity: 0;
+}
+
+.smenu a::hover:before{
+  opacity: 1;
+}
+
+.itemmm:target .smenu{
+  max-height: 4em;
+}
